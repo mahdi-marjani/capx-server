@@ -12,6 +12,25 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 ## API
 
+GET /models
+
+Response:
+
+```json
+{
+    "models": [
+        "bicycle",
+        "bus",
+        "tractor",
+        "boat",
+        "car",
+        "..."
+    ]
+}
+```
+
+---
+
 POST /detect
 
 Request:
@@ -31,6 +50,8 @@ Response:
   "cells": [1, 3, 7]
 }
 ```
+
+---
 
 Doc:
 
