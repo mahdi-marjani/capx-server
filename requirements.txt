@@ -1,5 +1,5 @@
 fastapi==0.128.0
 uvicorn==0.40.0
-capx-core==1.0.0
+capx-core==1.0.1
 numpy==2.2.6
 pillow==12.1.0
