@@ -5,6 +5,7 @@ from PIL import Image
 from io import BytesIO
 
 from capx_core.detector import detect_cells
+from capx_core.models import AVAILABLE_MODELS
 from .config import HOST, PORT
 from .schemas import DetectRequest, DetectResponse
 
@@ -50,6 +51,10 @@ def detect(req: DetectRequest):
 
     return {"cells": cells}
 
+
+@app.get("/models")
+async def models():
+    return {"models": AVAILABLE_MODELS}
 
 # =========================
 # Local run (optional)
